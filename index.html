@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>index</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="app/topolr.js?t=1" type="text/javascript"></script>
+        <script>
+            var path=process.cwd().replace(/\\/g,"/");
+            App.ipc= require("electron").ipcRenderer;
+            App({
+    "basePath": "app/dist/",
+    "debug": false,
+    "title": "marklr",
+    "description": "markdown editor",
+    "keywords": "md markdown editor",
+    "boot": "option.root.app",
+    "map": {
+        "d": true,
+        "m": {
+            "p": {
+                "form": "8aa70d39d2",
+                "keymap": "aa448479f5",
+                "main": "6424b1a562",
+                "option.root": "e735254a87",
+                "pipe": "ad3a684318",
+                "service.base": "8181461c1d",
+                "service.clickservice": "a573ce6d98",
+                "tools": "0a03e2be54",
+                "ui": "ae4804c9ff",
+                "util.file": "0724188e71"
+            },
+            "j": {
+                "lib.ace.ace": "3fe59e8cb2"
+            },
+            "c": {
+                "style.app": "865565c2cd",
+                "style.font": "df886cbb0a",
+                "style.form": "4752ec8e1b",
+                "style.github-markdown": "5f53433ed3",
+                "style.scrollbar": "3c7b8d9767",
+                "style.style": "8cebec1a04",
+                "style.uistyle": "d982702ef7"
+            },
+            "t": {
+                "template.form": "3016528780",
+                "template.temp": "cfd9bdc5dc",
+                "template.ui": "637f9364ef"
+            }
+        },
+        "c": {
+            "option-root-c6": {
+                "p": [
+                    "option.root",
+                    "main",
+                    "pipe",
+                    "tools",
+                    "ui",
+                    "util.file",
+                    "form",
+                    "service.clickservice",
+                    "keymap",
+                    "service.base"
+                ],
+                "t": [
+                    "template.form",
+                    "template.ui",
+                    "template.temp"
+                ],
+                "c": [
+                    "style.form",
+                    "style.uistyle",
+                    "style.font",
+                    "style.app",
+                    "style.style",
+                    "style.github-markdown"
+                ]
+            }
+        },
+        "id": "ec158e6f08e4efc09cd07f85e5246181"
+    }
+}).setSitePath(path).boot();
+        </script>
+    </head>
+    <body></body>
+</html>

@@ -1,0 +1,35 @@
+<!--[form]-->
+<%for(var i=0;i<data.fields.length;i++){%>
+<@module type="{{data.fields[i].type}}" id="{{i}}"/>
+<%}%>
+<!--[input]-->
+<div class="field-label"><%=data.label;%></div>
+<div class="field-input"><input type="text" data-find="input" placeholder="<%=data.placeholder;%>"></div>
+<div class="field-tip" data-find="tip"></div>
+<!--[select]-->
+<div class="field-label"><%=data.label;%></div>
+<div class="field-input"><input type="text" readonly="true" data-find="input"></div>
+<div class="field-select">
+	<%for(var i=0;i<data.options.length;i++){%>
+	<div class="field-select-option" data-find="item" num="<%=i;%>"><%=data.options[i].name;%></div>
+	<%}%>
+</div>
+<div class="field-tip" data-find="tip"></div>
+<!--[radio]-->
+<div class="field-label"><%=data.label;%></div>
+<div class="field-radio">
+	<%for(var i=0;i<data.radios.length;i++){%>
+	<div class="field-radio-radio" data-find="item" num="<%=i;%>">
+		<div class="field-radio-radio-b"></div>
+		<div class="field-radio-radio-a"><%=data.radios[i].name;%></div>
+	</div>
+	<%}%>
+</div>
+<div class="field-tip" data-find="tip"></div>
+<!--[image]-->
+<div class="field-label"><%=data.label;%></div>
+<div class="field-image">
+	<div class="field-image-con" data-find="con"><%=data.placeholder;%></div>
+	<input type="file" accept="<%=data.accept;%>" data-find="input">
+</div>
+<div class="field-tip" data-find="tip"></div>

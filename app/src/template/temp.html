@@ -1,0 +1,120 @@
+<!--[container]-->
+<div class="container-head">
+	<div class="container-head-menu-con" data-find="menulist"></div>
+	<div class="container-head-tabs" data-find="tabs">
+		<div class="container-head-tabs-inner" data-find="tabsinner">
+			<%for(var m=0;m<data.tabs.length;m++){%>
+			<div class="container-head-tabs-tab<%=(data.tabs[m].active?' active':'');%>" data-group="tabitem" @cache(data.tabs[m])>
+				<div class="container-head-tabs-tab-desc" data-groupi="tabitemdesc"><%=data.tabs[m].title;%></div>
+				<div class="container-head-tabs-tab-remove" data-groupi="tabitemremove"><i class="fa fa-close"></i></div>
+			</div>
+			<%}%>
+		</div>
+	</div>
+	<div class="container-head-under">
+		<div class="container-head-under-btn"><i class="fa fa-expand_more"></i></div>
+		<div class="container-head-under-list">
+			<%for(var m=0;m<data.tabs.length;m++){%>
+			<div class="container-head-under-list-item<%=(data.tabs[m].active?' active':'');%>" data-group="tabitem" @cache(data.tabs[m])>
+				<div data-groupi="tabitemdesc"><%=data.tabs[m].title;%></div>
+			</div>
+			<%}%>
+		</div>
+	</div>
+</div>
+<div class="container-body" data-find="body"></div>
+<div class="container-preview" data-find="preview"></div>
+<!--[toolbar]-->
+<div class="toolbar-top-opent" data-find="opentool"><i class="fa fa-brush"></i></div>
+<div class="toolbar-top-con">
+	<%for(var i=0;i<data.tools.length;i++){%>
+		<%if(data.tools[i].list&&data.tools[i].list.length){%>
+		<div class="toolbar-top-btn">
+			<div class="toolbar-top-btn-icon"><i class="fa <%=data.tools[i].icon;%>"></i></div>
+			<div class="toolbar-top-btn-list">
+				<%for(var t in data.tools[i].list){%>
+				<div class="toolbar-top-btn-list-item" data-find="itembtn" @cache(data.tools[i].list[t])>
+					<i class="fa <%=data.tools[i].list[t].icon;%>"></i>
+				</div>
+				<%}%>
+			</div>
+		</div>
+		<%}else{%>
+		<div class="toolbar-top-btn" data-find="itembtn" @cache(data.tools[i])><i class="fa <%=data.tools[i].icon;%>"></i></div>
+		<%}%>
+	<%}%>
+</div>
+<div class="toolbar-top-open" data-find="closetool">
+	<i class="fa fa-navigate_before"></i>
+</div>
+<!--[menulist]-->
+<div class="menulist-head-menu">
+	<div class="menulist-head-menu-icon" data-find="menubtn"><i class="fa fa-menu"></i></div>
+	<div class="menulist-head-menu-list">
+		<%for(var i=0;i<data.menu.length;i++){%>
+			<%if(data.menu[i].list&&data.menu[i].list.length>0){%>
+			<div class="menulist-head-menu-list-item">
+				<div class="menulist-head-menu-list-item-icon"><i class="fa <%=data.menu[i].icon;%>"></i></div>
+				<div class="menulist-head-menu-list-item-desc"><%=data.menu[i].name;%></div>
+				<div class="menulist-head-menu-list-sublist">
+					<%for(var t=0;t<data.menu[i].list.length;t++){%>
+					<div class="menulist-head-menu-list-sublist-item" data-find="menuitem" data-action="<%=data.menu[i].list[t].action;%>" @cache(data.menu[i].list[t])>
+						<%if(data.menu[i].list[t].icon){%>
+						<div class="menulist-head-menu-list-sublist-item-icon"><i class="fa <%=data.menu[i].list[t].icon;%>"></i></div>
+						<div class="menulist-head-menu-list-sublist-item-desc"><%=data.menu[i].list[t].name;%></div>
+						<%}else{%>
+						<div class="menulist-head-menu-list-sublist-item-desc-to"><%=data.menu[i].list[t].name;%></div>
+						<%}%>
+					</div>
+					<%}%>
+				</div>
+			</div>
+			<%}else{%>
+			<div class="menulist-head-menu-list-item" data-find="menuitem" data-action="<%=data.menu[i].action;%>" @cache(data.menu[i])>
+				<div class="menulist-head-menu-list-item-icon"><i class="fa <%=data.menu[i].icon;%>"></i></div>
+				<div class="menulist-head-menu-list-item-desc"><%=data.menu[i].name;%></div>
+			</div>
+			<%}%>
+		<%}%>
+	</div>
+</div>
+<!--[editorpannel]-->
+<div class="editorpannel-left" data-find="left"></div>
+<!--[editor]-->
+<div class="editor-con" data-find="editorcon"></div>
+<!--[preview]-->
+<div class="preview-inner">
+	<div class="markdown-body" data-find="inner"></div>
+</div>
+<!--[welcome]-->
+<div class='welcome-logo'></div>
+<!--[about]-->
+<div class="about-win" data-find="win">
+	<div class="about-win-logo">
+		<div class="about-win-logo-in"></div>
+	</div>
+	<div class="about-win-a"><%=data.name;%> v<%=data.version;%></div>
+	<div class='about-win-b'><%=data.author;%></div>
+</div>
+<!--[setting]-->
+<div class="setting-win">
+	<div class="setting-win-title"><i class="fa fa-settings"></i> setting</div>
+	<div class="setting-win-body">
+		<div class="setting-win-tab">
+			<div class="setting-win-tab-title">
+				<div class="setting-win-tab-title-item" data-find="titleitem">Default</div>
+				<div class="setting-win-tab-title-item" data-find="titleitem">History</div>
+			</div>
+			<div class="setting-win-tab-content">
+				<div class="setting-win-tab-content-item" data-find="tabcontent"></div>
+				<div class="setting-win-tab-content-item" data-find="tabcontent">
+					<div class="setting-btn" data-bind="click:cleanhistory">clean history</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="setting-win-foot">
+		<div class="setting-win-foot-btn" data-bind="click:default">default</div>
+		<div class="setting-win-foot-btn" data-bind="click:close">close</div>
+	</div>
+</div>

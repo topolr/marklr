@@ -1,0 +1,19 @@
+var topolr=require("topolr-util");
+module.exports={
+    command:"savecontent",
+    trigger:function(data,done){
+        if(data){
+            if(data.path){
+                topolr.file(data.path).write(data.content).then(function(){
+                    done(true);
+                }).fail(function(){
+                    done(false);
+                });
+            }else{
+                done(false);
+            }
+        }else{
+            done(false)
+        }
+    }
+};

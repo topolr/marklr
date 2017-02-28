@@ -1,0 +1,8 @@
+{
+	"fontsize":12,
+	"theme":"ace/theme/idle_fingers",
+	"linenum":true,
+	"template":{
+		"github":"config/template/github.html"
+	}
+}

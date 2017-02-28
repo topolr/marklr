@@ -1,0 +1,61 @@
+<!--[toast]-->
+<div class="toast-desc"><%=data.desc;%></div>
+<!--[alert]-->
+<div class="alert-mask">
+	<div class="alert-box" data-find="box" style="width:<%=data.width;%>;">
+		<div class="alert-box-title"><%=data.title;%></div>
+		<div class="alert-box-body"><%=data.content;%></div>
+		<div class="alert-box-foot">
+			<%for(var i=0;i<data.btns.length;i++){%>
+			<div class="alert-box-foot-btn" data-find="btn" @cache(data.btns[i])><%=data.btns[i].name;%></div>
+			<%}%>
+		</div>
+	</div>
+</div>
+<!--[chouti]-->
+<div class="chouti-mask" data-find="mask"></div>
+<div class="chouti-box" data-find="box" style="width:<%=data.width;%>;">
+	<div class="chouti-box-title"><%=data.title;%></div>
+	<div class="chouti-box-body" data-find="body"><%=data.content;%></div>
+	<div class="chouti-box-foot">
+		<%for(var i=0;i<data.btns.length;i++){%>
+		<div class="chouti-box-foot-btn" data-find="btn" @cache(data.btns[i])><%=data.btns[i].name;%></div>
+		<%}%>
+	</div>
+</div>
+<!--[getlink]-->
+<div class="chouti-mask" data-find="mask"></div>
+<div class="chouti-box" data-find="box" style="width:<%=data.width;%>;">
+	<div class="chouti-box-title"><%=data.title;%></div>
+	<div class="chouti-box-body" data-find="body"></div>
+	<div class="chouti-box-foot">
+		<%for(var i=0;i<data.btns.length;i++){%>
+		<div class="chouti-box-foot-btn" data-find="btn" @cache(data.btns[i])><%=data.btns[i].name;%></div>
+		<%}%>
+	</div>
+</div>
+<!--[insertimg]-->
+<div class="chouti-mask" data-find="mask"></div>
+<div class="chouti-box" data-find="box" style="width:<%=data.width;%>;">
+	<div class="chouti-box-title"><%=data.title;%></div>
+	<div class="chouti-box-body" data-find="body">
+		<div class="chouti-box-body-inner">
+			<div data-find="formone"></div>
+			<div class="chouti-box-tabs">
+				<div class="chouti-box-tabs-title">
+					<div data-find="tabtitle" class="chouti-box-tabs-title-item active">image</div>
+					<div data-find="tabtitle" class="chouti-box-tabs-title-item">text</div>
+				</div>
+				<div class="chouti-box-tabs-content">
+					<div data-find="tabcontent" class="chouti-box-tabs-content-item active"></div>
+					<div data-find="tabcontent" class="chouti-box-tabs-content-item"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="chouti-box-foot">
+		<%for(var i=0;i<data.btns.length;i++){%>
+		<div class="chouti-box-foot-btn" data-find="btn" @cache(data.btns[i])><%=data.btns[i].name;%></div>
+		<%}%>
+	</div>
+</div>

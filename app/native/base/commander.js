@@ -1,0 +1,21 @@
+var pipe=require("./pipe");
+[
+	require("./command/parsemarkdown"),
+	require("./command/openfile"),
+	require("./command/browsefile"),
+	require("./command/exporthtml"),
+	require("./command/savefile"),
+	require("./command/exportpdf"),
+	require("./command/savecontent"),
+	require("./command/quit"),
+	require("./command/setrecent"),
+	require("./command/getrecent"),
+	require("./command/cleanrecent"),
+	require("./command/appinfo"),
+	require("./command/cleanrecent"),
+	require("./command/getsetting"),
+	require("./command/savesetting"),
+	require("./command/defaultsetting")
+].forEach(function(a){
+	pipe.listen(a.command,a.trigger);
+});

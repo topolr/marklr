@@ -1,0 +1,30 @@
+{
+  "name": "marklr",
+  "version": "0.1.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "dev":"electron main.js",
+    "app":"electron app.js",
+    "build:mac":"node builder/mac-builder.js",
+    "build:windows":"node builder/windows-builder.js",
+    "build:linux":"node builder/linux-builder.js"
+  },
+  "keywords": [
+    "client",
+    "markdown",
+    "editor"
+  ],
+  "author": "hou80houzhu",
+  "contributors": [],
+  "dependencies": {
+    "electron": "^0.4.1",
+    "electron-prebuilt": "^1.2.1",
+    "html-pdf": "^2.1.0",
+    "marked": "^0.3.6",
+    "topolr-util": "^0.1.16"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.3.0"
+  }
+}
