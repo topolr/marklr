@@ -22,7 +22,8 @@
     "electron-prebuilt": "^1.2.1",
     "html-pdf": "^2.1.0",
     "marked": "^0.3.6",
-    "topolr-util": "^0.1.16"
+    "topolr-util": "^1.0.0",
+    "cli-color": "^1.1.0"
   },
   "devDependencies": {
     "electron-packager": "^8.3.0"
