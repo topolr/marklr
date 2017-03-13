@@ -2,28 +2,41 @@
   "name": "marklr",
   "version": "0.1.0",
   "main": "app.js",
+  "description": "A simple markdown editor powered by topolr",
   "scripts": {
     "start": "electron .",
-    "dev":"electron main.js",
-    "app":"electron app.js",
-    "build:mac":"node builder/mac-builder.js",
-    "build:windows":"node builder/windows-builder.js",
-    "build:linux":"node builder/linux-builder.js"
+    "dev": "electron main.js",
+    "app": "electron app.js",
+    "build:mac": "topolr-builter build --pub&&node builder/mac-builder.js",
+    "build:windows": "topolr-builter build --pub&&node builder/windows-builder.js",
+    "build:linux": "topolr-builter build --pub&&node builder/linux-builder.js"
   },
   "keywords": [
     "client",
     "markdown",
     "editor"
   ],
-  "author": "hou80houzhu",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/topolr/marklr.git"
+  },
+  "author": {
+    "name": "WangJinliang(hou80houzhu)",
+    "email": "hou80houzhu@vip.qq.com"
+  },
+  "bugs": {
+    "url": "https://github.com/topolr/marklr/issues"
+  },
+  "homepage": "http://topolr.org/",
   "contributors": [],
   "dependencies": {
+    "cli-color": "^1.1.0",
     "electron": "^0.4.1",
     "electron-prebuilt": "^1.2.1",
     "html-pdf": "^2.1.0",
     "marked": "^0.3.6",
-    "topolr-util": "^1.0.0",
-    "cli-color": "^1.1.0"
+    "topolr": "^1.3.12",
+    "topolr-util": "^1.0.0"
   },
   "devDependencies": {
     "electron-packager": "^8.3.0"

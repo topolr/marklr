@@ -14,7 +14,7 @@
  *   sequnce       - make sequnce
  *   outmapSequnce - out map file make sequnce
  */
-
+require("topolr").copyMiniTo(__dirname + "/app/topolr.js");
 module.exports={
     basePath:"./app/src/",
     bootPacket:"option.root",
