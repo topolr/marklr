@@ -7,16 +7,9 @@
         <script src="app/topolr.js?t=1" type="text/javascript"></script>
         <script>
             var path=process.resourcesPath.replace(/\\/g,"/")+"/app/";
-            var path=process.cwd().replace(/\\/g,"/");
+//            var path=process.cwd().replace(/\\/g,"/");
             App.ipc= require("electron").ipcRenderer;
-            App({
-                basePath:"app/pub/",
-                debug:false,
-                title:"marklr",
-                description:"markdown editor",
-                keywords:"md markdown editor",
-                boot:"option.root.app"
-            }).setSitePath(path).boot();
+            App({"basePath":"app/pub/","debug":false,"title":"marklr","description":"markdown editor","keywords":"md markdown editor","boot":"option.root.app","map":{"d":false,"m":{"j":{"lib.ace.ace":"b3eca15c3d"},"p":{"site.admin":"f830c8b65c","site.service.admin":"e6234d61df","site.service.apiconfig":"181406571c","site.service.base":"aab14f52ce","site.service.site":"cec16a52c5","site.setting":"69ce0b1dc2","site.site":"4570efe6be","util.editor":"e50c3a9bd2","util.file":"4b1fbd615b","util.images":"69aa15616d","util.router":"439b5bb432","util.uikit":"7b4d17187c","form":"922e069d8f","keymap":"96b92cfa7d","main":"382f0839ec","option.root":"f0dc584e85","pipe":"1473f88693","service.base":"34a9c708e2","service.clickservice":"8cf64dd812","tools":"64df6cde82","ui":"3a3843acf6"},"c":{"site.style.grid":"ebcc2c69db","site.style.main":"9f5c3e8101","site.style.style":"04ff10b2c7","util.style.images":"069c102ba2","util.style.uikit":"20f6f8ee0e","style.app":"692c88054d","style.font":"c4b9c0d409","style.form":"55e3f847c1","style.github-markdown":"2aa14a1d3a","style.scrollbar":"ea59646536","style.style":"a0e9b110f3","style.uistyle":"c5e3da2ef0"},"t":{"site.template.admintemp":"fa245400e6","site.template.sitetemp":"deb865e822","util.template.imagestemp":"7a615cee41","template.form":"3016528780","template.temp":"cfd9bdc5dc","template.ui":"637f9364ef"}},"c":{"c7a5148704":{"p":["option.root","main","pipe","tools","ui","util.file","form","service.clickservice","keymap","service.base"],"t":["template.form","template.ui","template.temp"],"c":["style.form","style.uistyle","style.font","style.app","style.style","style.github-markdown"]}}}}).setSitePath(path).boot();
         </script>
     </head>
     <body></body>

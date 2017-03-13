@@ -1,7 +1,7 @@
 var package=require("./../package");
 module.exports={
     'dir': './',
-    'arch': 'all',//ia32, x64, armv7l, all
+    'arch': 'x64',//ia32, x64, armv7l, all
     'app-copyright': 'hou80houzhu',
     'app-version': package.version,
     'asar': false,

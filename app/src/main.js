@@ -652,7 +652,9 @@ Module({
     init:function(){
         var ths=this;
         this.render();
-        $().create("script").attr("src",sitePath+"app/dist/lib/ace/ace.js").attr("type","text/noload").appendTo("head");
+        var t=module.currentPath.split("/");
+        t.pop();
+        $().create("script").attr("src",t.join("/")+"/lib/ace/ace.js").attr("type","text/noload").appendTo("head");
         module.getMapSource("@ace").done(function () {
             var id=topolr.util.randomid();
             ths.finders("editorcon").attr("id",id);
