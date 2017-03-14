@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="app/topolr.js" type="text/javascript"></script>
         <script>
-            var path=process.resourcesPath.replace(/\\/g,"/")+"/app/";
+            var path=process.resourcesPath.replace(/\\/g,"/")+"/{{path}}/";
 //            var path=process.cwd().replace(/\\/g,"/")+"/";
             App.ipc= require("electron").ipcRenderer;
             App({"basePath":"app/pub/","debug":false,"title":"marklr","description":"markdown editor","keywords":"md markdown editor","boot":"option.root.app","map":{"d":false,"m":{"p":{"form":"b9c12bdc5f","keymap":"6a4d92c55d","main":"a8984b31ff","option.root":"17e6963097","pipe":"cc4f30ab57","service.base":"b5fdb0a608","service.clickservice":"6144444550","tools":"ef150a7886","ui":"77b0d4d34b","util.file":"2b3f578d90"},"j":{"lib.ace.ace":"16a17a1c97"},"c":{"style.app":"692c88054d","style.font":"c4b9c0d409","style.form":"55e3f847c1","style.github-markdown":"2aa14a1d3a","style.scrollbar":"ea59646536","style.style":"c4eb5790a6","style.uistyle":"c5e3da2ef0"},"t":{"template.form":"3016528780","template.temp":"cfd9bdc5dc","template.ui":"637f9364ef"}},"c":{"05f64f525a":{"p":["option.root","main","pipe","tools","ui","util.file","form","service.clickservice","keymap","service.base"],"t":["template.form","template.ui","template.temp"],"c":["style.form","style.uistyle","style.font","style.app","style.style","style.github-markdown"]}}}}).setSitePath(path).boot();
