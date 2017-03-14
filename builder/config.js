@@ -4,7 +4,7 @@ module.exports={
     'arch': 'x64',//ia32, x64, armv7l, all
     'app-copyright': 'hou80houzhu',
     'app-version': package.version,
-    'asar': false,
+    'asar': true,
     'icon': './icons/logo.icns',
     'name': 'marklr',
     'ignore': [
