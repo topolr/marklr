@@ -29,7 +29,7 @@ module.exports={
     },
     publish:{
         output:"../pub/",
-        pageTemp:"./../../app.html",
+        pageTemp:["./../../app.html","./../../app_temp.html"],
         outMap:false,
         sequnce:{},
         outmapSequnce:{}
