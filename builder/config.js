@@ -11,7 +11,7 @@ module.exports={
         '.git',
         "releases",
         "builder",
-        "gitignore",
+        ".gitignore",
         "index.html",
         "main.js",
         "topolr-builter-config.js",

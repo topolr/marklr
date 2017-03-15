@@ -4,7 +4,7 @@ var pdf = require('html-pdf');
 module.exports={
     command:"exportpdf",
     trigger:function(data,done){
-    	var tpath=topolr.cpath.getRelativePath(__dirname+"/","./../../"+config.template.github);
+    	var tpath=require("path").resolve(__dirname,"./../../",config.template.github);
     	topolr.file(tpath).read().then(function(datas){
     		return src=topolr.template(datas).render({content:data.content});
     	}).then(function(content){
@@ -28,7 +28,8 @@ module.exports={
             return ps;
     	}).done(function(){
             done(true);
-        }).fail(function(){
+        }).fail(function(e){
+            console.log(e)
             done(false);
         });
     }
