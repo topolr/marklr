@@ -5,8 +5,8 @@
   "description": "A simple markdown editor powered by topolr",
   "scripts": {
     "start": "electron .",
-    "dev": "electron main.js",
-    "app": "electron app.js",
+    "dev": "topolr-builter build --dev&&electron main.js",
+    "app": "topolr-builter build --pub&&electron app.js",
     "build:mac": "topolr-builter build --pub&&node builder/mac-builder.js",
     "build:windows": "topolr-builter build --pub&&node builder/windows-builder.js",
     "build:linux": "topolr-builter build --pub&&node builder/linux-builder.js"
